@@ -1,6 +1,6 @@
 // 1. PRODUCTOS (los originales; se usan la primera vez o al restablecer)
 const productosOriginales = [
-    { id: 1, nombre: "Bocina JBL Xtreme", categoria: "Accesorios", subcategoria: "Bocinas", precio: 2500, imagen: "https://www.bing.com/images/search?view=detailV2&ccid=%2fFcw6MxG&id=D8FE2D776FD6FE3FB62CD1259913BECC516F2239&thid=OIP._Fcw6MxGncdCRdlkIqB0CQHaEZ&mediaurl=https%3a%2f%2fm.media-amazon.com%2fimages%2fI%2f81EnOgtLIqL._AC_SY450_.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fc5730e8cc469dc74245d96422a07409%3frik%3dOSJvUcy%252bE5kl0Q%26pid%3dImgRaw%26r%3d0&exph=450&expw=759&q=jbl+xtreme+5&FORM=IRPRST&ck=25C67C9D31E2AE13FE0AD60927EECB2C&selectedIndex=6&itb=0" },
+    { id: 1, nombre: "Bocina JBL Xtreme", categoria: "Accesorios", subcategoria: "Bocinas", precio: 2500, imagen: "https://tse2.mm.bing.net/th/id/OIP.iKDDgnk0KAfiTWgHugvC2gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" },
     { id: 2, nombre: "Bocina JBL Boombox", categoria: "Accesorios", subcategoria: "Bocinas", precio: 5800, imagen: "img/1000140513.jpg" },
     { id: 3, nombre: "Bocina JBL Go", categoria: "Accesorios", subcategoria: "Bocinas", precio: 800, imagen: "img/1000140511.jpg" },
     { id: 4, nombre: "AirPods Pro", categoria: "Accesorios", subcategoria: "Audífonos", precio: 4500, imagen: "img/1000140501.jpg" },
