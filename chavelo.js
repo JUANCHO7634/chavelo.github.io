@@ -1,6 +1,6 @@
 // 1. PRODUCTOS (los originales; se usan la primera vez o al restablecer)
 const productosOriginales = [
-    { id: 1, nombre: "Bocina JBL Xtreme", categoria: "Accesorios", subcategoria: "Bocinas", precio: 2500, imagen: "https://tse2.mm.bing.net/th/id/OIP.iKDDgnk0KAfiTWgHugvC2gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" },
+    { id: 1, nombre: "Bocina JBL Xtreme", categoria: "Accesorios", subcategoria: "Bocinas", precio: 2500, imagen: "img/bocina.PNG" },
     { id: 2, nombre: "Bocina JBL Boombox", categoria: "Accesorios", subcategoria: "Bocinas", precio: 5800, imagen: "img/1000140513.jpg" },
     { id: 3, nombre: "Bocina JBL Go", categoria: "Accesorios", subcategoria: "Bocinas", precio: 800, imagen: "img/1000140511.jpg" },
     { id: 4, nombre: "AirPods Pro", categoria: "Accesorios", subcategoria: "Audífonos", precio: 4500, imagen: "img/1000140501.jpg" },
