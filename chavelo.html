@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonStore | Tu música a otro nivel</title>
+    <link rel="stylesheet" href="chavelo.css">
+    <!-- Librería de iconos gratuita -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">NEON<span>STORE</span></div>
+            <div class="nav-actions">
+                <button class="admin-btn" id="open-admin-btn"><i class="fa-solid fa-gear"></i> Admin</button>
+                <button class="cart-btn" id="open-cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-counter" class="cart-counter hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Frase principal) -->
+    <header class="hero">
+        <h1>Joyas musicales en <br><span class="neon-text">máxima fidelidad</span></h1>
+        <p>Eleva tu experiencia auditiva y tu estilo con el mejor equipamiento. Calidad pasada de rosca, diseño brutal.</p>
+    </header>
+
+    <!-- Filtros de Categorías -->
+    <section class="filters" id="filters-container"></section>
+
+    <!-- Cuadrícula de Productos -->
+    <main class="products-grid" id="products-container"></main>
+
+    <!-- Footer / Redes Sociales -->
+    <footer class="footer">
+        <h3>CONECTA CON NOSOTROS</h3>
+        <div class="social-icons">
+            <a href="#" class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="icon tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="icon whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="icon facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <p>© 2026 NeonStore. Todos los derechos pvto.</p>
+    </footer>
+
+    <!-- Carrito Lateral (Drawer) -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-header">
+                <h2><i class="fa-solid fa-cart-shopping"></i> Tu Carrito</h2>
+                <button id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items-container"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price" class="neon-text">$0</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn" disabled>PROCEDER AL PAGO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel de Administración -->
+    <div class="admin-overlay" id="admin-overlay">
+        <div class="admin-panel">
+            <div class="admin-header">
+                <h2><i class="fa-solid fa-gear"></i> Administrar productos</h2>
+                <button id="close-admin-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="admin-form" id="admin-form">
+                <h3 id="form-title">Agregar producto</h3>
+                <input type="hidden" id="prod-id">
+
+                <div class="form-group full">
+                    <label for="prod-nombre">Nombre</label>
+                    <input type="text" id="prod-nombre" placeholder="Ej. Bocina JBL Flip">
+                </div>
+                <div class="form-group">
+                    <label for="prod-categoria">Categoría</label>
+                    <input type="text" id="prod-categoria" list="lista-categorias" placeholder="Ej. Accesorios">
+                    <datalist id="lista-categorias"></datalist>
+                </div>
+                <div class="form-group">
+                    <label for="prod-subcategoria">Subcategoría</label>
+                    <input type="text" id="prod-subcategoria" list="lista-subcategorias" placeholder="Ej. Bocinas">
+                    <datalist id="lista-subcategorias"></datalist>
+                </div>
+                <div class="form-group">
+                    <label for="prod-precio">Precio ($)</label>
+                    <input type="number" id="prod-precio" min="0" step="1" placeholder="1500">
+                </div>
+                <div class="form-group">
+                    <label for="prod-archivo">Imagen (subir archivo)</label>
+                    <input type="file" id="prod-archivo" accept="image/*">
+                </div>
+                <div class="form-group full">
+                    <label for="prod-url">o pega un link de imagen</label>
+                    <input type="text" id="prod-url" placeholder="img/foto.jpg  ó  https://...">
+                </div>
+                <div class="img-preview" id="img-preview"><img id="img-preview-tag" alt="Vista previa"></div>
+
+                <div class="form-buttons">
+                    <button class="save-btn" id="save-product-btn"><i class="fa-solid fa-floppy-disk"></i> Guardar producto</button>
+                    <button class="cancel-btn" id="cancel-edit-btn">Limpiar</button>
+                </div>
+            </div>
+
+            <div class="admin-list">
+                <h3>Productos (<span id="admin-count">0</span>)</h3>
+                <div id="admin-list-container" style="display:flex;flex-direction:column;gap:10px;"></div>
+            </div>
+            <button class="reset-btn" id="reset-btn">Restablecer productos originales</button>
+        </div>
+    </div>
+
+    <script src="chavelo.js"></script>
+</body>
+</html>
