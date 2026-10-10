@@ -1,6 +1,6 @@
 // 1. PRODUCTOS (los originales; se usan la primera vez o al restablecer)
 const productosOriginales = [
-    { id: 1, nombre: "Bocina JBL Xtreme", categoria: "Accesorios", subcategoria: "Bocinas", precio: 2500, imagen: "/imagenes/jbl mediana.png" },
+    { id: 1, nombre: "Bocina JBL Xtreme", categoria: "Accesorios", subcategoria: "Bocinas", precio: 2500, imagen: "/imagenes/jbl-mediana.png" },
     { id: 2, nombre: "Bocina JBL Boombox", categoria: "Accesorios", subcategoria: "Bocinas", precio: 5800, imagen: "img/1000140513.jpg" },
     { id: 3, nombre: "Bocina JBL Go", categoria: "Accesorios", subcategoria: "Bocinas", precio: 800, imagen: "img/1000140511.jpg" },
     { id: 4, nombre: "AirPods Pro", categoria: "Accesorios", subcategoria: "Audífonos", precio: 4500, imagen: "img/1000140501.jpg" },
@@ -237,9 +237,11 @@ inpArchivo.addEventListener("change", () => {
             canvas.width = img.width * escala;
             canvas.height = img.height * escala;
             canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
-            imagenSubida = canvas.toDataURL("image/jpeg", 0.8);
-            imagenSubida = canvas.imagenes("image/png", 0.8);
-            inpUrl.value = "";
+            // Busca esta parte en tu función de inpArchivo.addEventListener("change", ...) y déjala así:
+imagenSubida = canvas.toDataURL("image/jpeg", 0.8);
+inpUrl.value = "";
+mostrarPreview(imagenSubida);
+
             mostrarPreview(imagenSubida);
         };
         img.src = ev.target.result;
