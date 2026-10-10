@@ -238,6 +238,7 @@ inpArchivo.addEventListener("change", () => {
             canvas.height = img.height * escala;
             canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
             imagenSubida = canvas.toDataURL("image/jpeg", 0.8);
+            imagenSubida = canvas.imagenes("image/png", 0.8);
             inpUrl.value = "";
             mostrarPreview(imagenSubida);
         };
